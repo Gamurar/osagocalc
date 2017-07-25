@@ -1,0 +1,357 @@
+#osago{
+	height: auto;
+	width: 850px;
+	padding: 10px 10px 10px 20px;
+	border: 1px solid rgb(221, 221, 221);
+	display: flex;
+	flex-wrap: wrap;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #999;
+}
+	#osago > div{
+		width: 425px;
+		margin: 0 0 15px 0;
+	}
+		#osago > div > div{
+			margin: 0 0 8px 0;
+		}
+		#osago > div > label{
+			display: flex;
+			align-items: center;
+			margin-bottom: 5px;
+		}
+		#osago >  div:last-child > div:last-child{
+			display: flex;
+		}
+		#osago >  div:last-child > div:last-child > label{
+			margin-left: 5px;
+			display: flex;
+			align-items: center;
+		}
+	#osago input{
+		display: none;
+	}
+	#osago label{
+		cursor: pointer;
+	}
+	.osago-radio{
+		height: 22px;
+		width: 22px;
+		border: 1px solid #d4d0c9;
+		border-radius: 50%;
+		opacity: 1;
+		display: inline-block;
+		margin: 0 5px 0 0;
+		position: relative;
+		transition: border 0.3s;
+	}
+	#osago label:hover .osago-radio {
+		border: 1px solid #de8650;
+	}
+	.osago-radio:after{
+		content: "";
+		transition: opacity 0.3s;
+		opacity: 0;
+		display: inline-block;
+		height: 12px;
+		width: 12px;
+		background: #de8650;
+		vertical-align: middle;
+		position: absolute;
+		left: 4px;
+		top: 4px;
+		border: 1px solid #d28759;
+		border-radius: 50%;
+	}
+	#osago > div > label > input:checked + div:after{
+		opacity: 1;
+	}
+	#osago > div > div > label > input:checked + div:after{
+		opacity: 1;
+	}
+	#osago select{
+		height: 32px;
+		width: 392px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		outline: none;
+		color: #555;
+		background: #fff;
+		transition: border 0.5s, box-shadow 0.5s;
+	}
+	#osago select:hover{
+		border: 1px solid rgb(102, 175, 233);
+		box-shadow: 0 0 3px rgba(0,0,125,0.5);
+	}
+#osago-button{
+	margin: 20px 0 20px 0;
+	font-size: 18px;
+	padding: 10px 16px;
+	border-radius: 6px;
+	background-color: #f0ad4e;
+	color: #fff;
+	border: 1px solid rgb(227, 141, 19);
+	cursor: pointer;
+	outline: none;
+}
+#osago-button:active{
+	background: #eb9316;
+}
+@media only screen and (max-width: 850px) {
+	#osago{
+		width: calc(100% - 30px);
+	}
+		#osago > div{
+			width: 100%;
+		}
+	#osago select{
+		width: calc(100% - 30px);
+	}
+}
+/********************************************************************/
+#osago-driver{
+	width: 880px;
+	border: 1px solid rgb(221, 221, 221);
+	margin-top: 20px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-bottom: 10px;
+	color: #999;
+	z-index: 1;
+}
+	#osago-driver > div{
+		padding: 10px 15px;
+	}
+	#osago-driver > div > div{
+		height: 70px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	#osago-driver > div:last-child{
+		flex-wrap: wrap;
+	}
+	#osago-driver > div:first-child{
+		font-size: 16px;
+		background: #ebebeb;
+	}
+	#osago-driver > div:last-child{
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+	}
+		#osago-driver > div:last-child > div > div:last-child{
+			display: flex;
+			align-items: center;
+		}
+		#osago-driver label{
+		cursor: pointer;
+	}
+	
+	#osago-driver label:hover .osago-radio {
+		border: 1px solid #de8650;
+	}
+	#osago-driver label > input:checked + div:after{
+		opacity: 1;
+	}
+	#osago-driver input{
+		display: none;
+	}
+	#osago-driver select{
+		height: 32px;
+		width: 126px;
+		border: 1px solid #ccc;
+		border-radius: 4px 0 0 4px;
+		outline: none;
+		color: #555;
+		background: #fff;
+		transition: border 0.5s, box-shadow 0.5s;
+	}
+	#osago-driver select:hover{
+		border: 1px solid rgb(102, 175, 233);
+		box-shadow: 0 0 3px rgba(0,0,125,0.5);
+	}
+			#osago-button-driver-id1{
+				height: 32px;
+				width: 125px;
+				border: 1px solid #e38d13;
+				background: #f0ad4e;
+				color: #fff;
+				outline: none;
+				cursor: pointer;
+				margin-left: -2px;
+			}
+			#osago-button-driver-id1:active{
+				background: #eb9316;
+			}
+	.osago-driver-content{
+		display: flex;
+	}
+	.osago-driver-content > label{
+		display: flex;
+		align-items: center;
+	}
+	.osago-driver-content > label:last-child{
+		margin-left: 10px;
+	}
+@media only screen and (max-width: 850px) {
+	#osago-driver{
+		width: calc(100%);
+	}
+}
+@media only screen and (max-width: 850px){
+	#osago-driver select{
+		width: 100%;
+	}
+	#osago-driver > div:last-child > div:last-child{
+		width: 100%;
+	}
+}
+
+/********************************************************************/
+#osago-result{
+	height: auto;
+	width: 850px;
+	padding: 10px 10px 10px 20px;
+	border: 1px solid rgb(221, 221, 221);
+	padding: 15px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	z-index: 1;
+}
+	#osago-result table{
+		width: 100%;
+	}
+		#osago-result td{
+			padding: 8px 0;
+			border-bottom: 1px solid rgb(221, 221, 221);
+		}
+		#osago-result tr:last-child > td{
+			border: none;
+		}
+	#osago-result > div{
+		font-size: 30px;
+		color: rgb(51, 51, 51);
+		padding: 5px 0 10px 0;
+		border-bottom: 1px solid rgb(221, 221, 221);
+	}
+	#osago-result > button{
+		margin: 25px 0 0 0;
+		background: #28a4c9;
+		color: #fff;
+		padding: 10px 16px;
+		font-size: 18px;
+		border-radius: 6px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+	#osago-result > button:active{
+		background: #337ab7;
+	}
+@media only screen and (max-width: 850px) {
+	#osago-result{
+		width: calc(100% - 30px);
+	}
+}
+/********************************************************************************************************************/
+#osago-modal-window{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0.6);
+	top: 0;
+	left: 0;
+	display: none;
+	opacity: 0;
+	justify-content: center;
+	align-items: center;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+	#osago-modal-window > div{
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 590px;
+		padding: 15px 23px 15px 15px;
+		background: #fff;
+		border-radius: 5px;
+		position: relative;
+	}
+		#osago-modal-window > div > div:first-child{
+			color: rgb(44, 44, 44);
+			margin: 10px 0;
+		}
+		#osago-modal-window > div > div:nth-child(2){
+			font-weight: bold;
+			margin: 10px 0;
+		}
+		#osago-modal-window > div > div:nth-child(4){
+			display: flex;
+			justify-content: space-between;
+			height: 65px;
+			margin: 10px 0;
+		}
+		#osago-modal-window > div > div:nth-child(4) > div{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+				#osago-modal-window > div > div:nth-child(4) > div > div:first-child{
+					font-weight: bold;
+				}
+		#osago-modal-window input{
+			height: 30px;
+			width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			outline: none;
+			color: #555;
+			background: #fff;
+			padding-left: 8px;
+			transition: border 0.5s, box-shadow 0.5s;
+		}
+		#osago-modal-window input:hover{
+			border: 1px solid rgb(102, 175, 233);
+			box-shadow: 0 0 3px rgba(0,0,125,0.5);
+		}
+		#osago-modal-window-button{
+			width: 140px;
+			margin-top: 6px;
+			color: #fff;
+			padding: 6px 12px;
+			border: 1px solid #e38d13;
+			background: #eb9316;
+			cursor: pointer;
+			outline: none;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+		#osago-modal-window-button:active{
+			background: #e38d13;
+		}
+		#osago-modal-window-close{
+			color: gray;
+			position: absolute;
+			top: 5px;
+			right: 8px;
+			font-size: 22px;
+			cursor: pointer;
+		}
+@media only screen and (max-width: 620px) {
+	#osago-modal-window > div{
+		height: auto;
+	}
+	#osago-modal-window > div > div:nth-child(4){
+		flex-direction: column;
+		height: auto;
+	}
+	#osago-modal-window > div > div{
+		margin: 0px 0 15px 0;
+	}
+	#osago-modal-window > div > div:nth-child(4) > div > div{
+		margin: 10px 0 10px 0;
+	}
+}

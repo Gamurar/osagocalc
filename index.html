@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="path/font-awesome/css/font-awesome.min.css">
+	<meta content='width=device-width,initial-scale=0.8' name='viewport'>
+</head>
+<body>
+<div id="osago">
+	<div>
+		<div>Собственник транспортного средства</div>
+			<label><input type="radio" name="radio1" checked="checked" value="1"><div class="osago-radio"></div>Физическое лицо </label>
+			<label><input type="radio" name="radio1" value="2"><div class="osago-radio"></div>Юридическое лицо </label>
+	</div>
+	<div>
+		<div>Регистрация транспортного средства</div>
+			<label><input type="radio" name="radio2" checked="checked" value="1"><div class="osago-radio"></div>Российская федерация  </label>
+			<label><input type="radio" name="radio2" value="2"><div class="osago-radio"></div>Иностранное государство </label>
+	</div>
+	<div>
+		<div>Регион</div>
+		<select name="osago-region" id="osago-region">
+			<option value="1" id="osago-region-id1">77 Москва город</option>
+			<option value="2">50 Московская область</option>
+			<option value="3">78 Санкт-Петербург город</option>
+			<option value="4">47 Ленинградская область</option>
+			<option value="5">01 Республика Адыгея</option>
+			<option value="6">02 Республика Башкортостан</option>
+			<option value="7">03 Республика Бурятия</option>
+			<option value="8">04 Республика Алтай</option>
+			<option value="9">05 Республика Дагестан</option>
+			<option value="10">06 Республика Ингушетия</option>
+			<option value="11">07 Кабардино-Балкарская Республика</option>
+			<option value="12">08 Республика Калмыкия</option>
+			<option value="13">09 Карачаево-Черкесская Республика</option>
+			<option value="14">10 Республика Карелия</option>
+			<option value="15">11 Республика Коми</option>
+			<option value="16">12 Республика Марий Эл</option>
+			<option value="17">13 Республика Мордовия</option>
+			<option value="18">14 Республика Саха (Якутия)</option>
+			<option value="19">15 Республика Северная Осетия - Алания</option>
+			<option value="20">16 Республика Татарстан</option>
+			<option value="21">17 Республика Тыва</option>
+			<option value="22">18 Удмуртская Республика</option>
+			<option value="23">19 Республика Хакасия</option>
+			<option value="24">21 Чувашская Республика</option>
+			<option value="25">22 Алтайский край</option>
+			<option value="26">23 Краснодарский край</option>
+			<option value="27">24 Красноярский край</option>
+			<option value="28">25 Приморский край</option>
+			<option value="29">26 Ставропольский край</option>
+			<option value="30">27 Хабаровский край</option>
+			<option value="31">28 Амурская область</option>
+			<option value="32">29 Архангельская область</option>
+			<option value="33">30 Астраханская область</option>
+			<option value="34">31 Белгородская область</option>
+			<option value="35">32 Брянская область</option>
+			<option value="36">33 Владимирская область</option>
+			<option value="37">34 Волгоградская область</option>
+			<option value="38">35 Вологодская область</option>
+			<option value="39">36 Воронежская область</option>
+			<option value="40">37 Ивановская область</option>
+			<option value="41">38 Иркутская область</option>
+			<option value="42">39 Калининградская область</option>
+			<option value="43">40 Калужская область</option>
+			<option value="44">42 Кемеровская область</option>
+			<option value="45">43 Кировская область</option>
+			<option value="46">44 Костромская область</option>
+			<option value="47">45 Курганская область</option>
+			<option value="48">46 Курская область</option>
+			<option value="49">48 Липецкая область</option>
+			<option value="50">49 Магаданская область</option>
+			<option value="51">51 Мурманская область</option>
+			<option value="52">52 Нижегородская область</option>
+			<option value="53">53 Новгородская область</option>
+			<option value="54">54 Новосибирская область</option>
+			<option value="55">55 Омская область</option>
+			<option value="56">56 Оренбургская область</option>
+			<option value="57">57 Орловская область</option>
+			<option value="58">58 Пензенская область</option>
+			<option value="59">59 Пермский край</option>
+			<option value="60">60 Псковская область</option>
+			<option value="61">61 Ростовская область</option>
+			<option value="62">62 Рязанская область</option>
+			<option value="63">63 Самарская область</option>
+			<option value="64">64 Саратовская область</option>
+			<option value="65">65 Сахалинская область</option>
+			<option value="66">66 Свердловская область</option>
+			<option value="67">67 Смоленская область</option>
+			<option value="68">68 Тамбовская область</option>
+			<option value="69">69 Тверская область</option>
+			<option value="70">70 Томская область</option>
+			<option value="71">71 Тульская область</option>
+			<option value="72">72 Тюменская область</option>
+			<option value="73">73 Ульяновская область</option>
+			<option value="74">74 Челябинская область</option>
+			<option value="75">75 Забайкальский край</option>
+			<option value="76">76 Ярославская область</option>
+			<option value="77">79 Еврейская автономная область</option>
+			<option value="78">82 Камчатский край</option>
+			<option value="79">83 Ненецкий АО</option>
+			<option value="80">86 Ханты-Мансийский АО</option>
+			<option value="81">87 Чукотский автономный округ</option>
+			<option value="82">89 Ямало-Ненецкий АО</option>
+			<option value="83">95 Чеченская Республика</option>
+			<option value="84">Республика Крым</option>
+			<option value="86">Байконур</option>
+		</select>
+	</div>
+	<div>
+		<div>Город</div>
+		<select name="osago-city" id="osago-city">
+			<option value="1" id="osago-city-id1">г. Москва</option>
+		</select>
+	</div>
+	<div>
+		<div>Транспортное средство</div>
+		<select name="osago-vehicle" id="osago-vehicle">
+			<option value="1">Мотоциклы и мотороллеры</option>
+			<option value="2">Легковые автомобили</option>
+			<option value="3">Легковые автомобили - такси</option>
+			<option value="4">Грузовые ТС до 16 тонн</option>
+			<option value="5">Грузовые ТС свыше 16 тонн</option>
+			<option value="6">Автобусы до 20 мест</option>
+			<option value="7">Автобусы свыше 20 мест</option>
+			<option value="8">Троллейбусы</option>
+			<option value="9">Трамваи</option>
+			<option value="10">Тракторы и иные машины</option>
+			<option value="11">Автобусы - такси</option>
+		</select>
+	</div>
+	<div>
+		<div>Мощность</div>
+		<select name="osago-power-car" id="osago-power-car">
+			<option value="0.6">До 50 л. с.</option>  
+			<option value="1">51-70 л. с.</option>  
+			<option value="1.1">71-100 л. с.</option>  
+			<option value="1.2">101-120 л. с.</option>  
+			<option value="1.4">121-150 л. с.</option>  
+			<option value="1.6">151 л. с. и более</option> 
+		</select>
+	</div>
+	<div>
+		<div>Регистрация транспортного средства</div>
+			<label><input type="radio" name="radio3" checked="checked" value="1"><div class="osago-radio"></div>ТС на учете в ГИБДД  </label>
+			<label><input type="radio" name="radio3" value="2"><div class="osago-radio"></div>ТС следует к месту регистрации </label>
+	</div>
+	<div>
+		<div>Срок страхования</div>
+		<select name="osago-term-of-insurance" id="osago-term-of-insurance">
+			<option value="1">1 год</option>  
+			<option value="0.95">9 месяцев</option>  
+			<option value="0.9">8 месяцев</option>  
+			<option value="0.8">7 месяцев</option>  
+			<option value="0.7">6 месяцев</option>  
+			<option value="0.65">5 месяцев</option>  
+			<option value="0.6">4 месяца</option>  
+			<option value="0.5">3 месяца</option>  
+			<option value="0.4">2 месяца</option>  
+			<option value="0.3">1 месяц</option> 
+			<option value="0.2">15 дней</option>
+		</select>
+	</div>
+	<div>
+		<div>Лица, допущенные к управлению</div>
+		<label><input type="radio" name="radio4" value="1"><div class="osago-radio"></div>Ограниченный список  </label>
+		<label><input type="radio" name="radio4" value="2"><div class="osago-radio"></div>Любые водители  </label>
+	</div>
+	<div>
+		<div>Количество водителей</div>
+		<div>
+			<label><input type="radio" name="radio5" value="1"><div class="osago-radio"></div>1</label>
+			<label><input type="radio" name="radio5" value="2"><div class="osago-radio"></div>2</label>
+			<label><input type="radio" name="radio5" value="3"><div class="osago-radio"></div>3</label>
+			<label><input type="radio" name="radio5" value="4"><div class="osago-radio"></div>4</label>
+		</div>
+	</div>
+</div>
+<div id="osago-driver">
+	<div>Водитель №1</div>
+	<div>
+		<div>
+			<div>Возраст (лет)</div>
+			<div class="osago-driver-content">
+				<label><input type="radio" name="radio6" value="1"><div class="osago-radio"></div>18-23  </label>
+				<label><input type="radio" name="radio6" value="2"><div class="osago-radio"></div>24 и более</label>
+			</div>
+		</div>
+		<div>
+			<div>Стаж (лет)</div>
+			<div class="osago-driver-content">
+				<label><input type="radio" name="radio7" value="1"><div class="osago-radio"></div>0-2  </label>
+				<label><input type="radio" name="radio7" value="2"><div class="osago-radio"></div>3 и более </label>
+			</div>
+		</div>
+		<div>
+			<div>Кбм</div>
+			<div>
+				<select name="osago-term-of-insurance" id="osago-term-of-insurance">
+					<option value="1">1</option>  
+					<option value="0.95">0.95</option>  
+					<option value="0.9">0.9</option>  
+					<option value="0.8">0.85</option>  
+					<option value="0.7">0.8</option>  
+					<option value="0.65">0.75</option>  
+					<option value="0.6">0.7</option>  
+					<option value="0.5">0.65</option>  
+					<option value="0.4">0.6</option>  
+					<option value="0.3">0.55</option> 
+					<option value="0.2">0.5</option>
+				</select>
+				<button id="osago-button-driver-id1">Проверить Кбм</button>
+			</div>
+		</div>
+	</div>
+</div>
+<button id="osago-button">Рассчитать ОСАГО</button>
+<div id="osago-result">
+	<div>Результат расчета</div>
+	<table>
+		<tr>
+			<td>Базовый тариф/коэффициент</td>
+			<td>Максимальный тариф</td>
+			<td>Минимальный тариф</td>
+		</tr>
+		<tr>
+			<td>Базовый тариф</td>
+			<td>6166</td>
+			<td>5138</td>
+		</tr>
+		<tr>
+			<td>Коэффициент территории</td>
+			<td>1.3</td>
+			<td>1.3</td>
+		</tr>
+		<tr>
+			<td>Кбм (коэффициент бонус-малус)</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Коэффициент за возраст/стаж</td>
+			<td>1.8</td>
+			<td>1.8</td>
+		</tr>
+		<tr>
+			<td>Коэффициент за период использования</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Коэффициент за срок страхования</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Коэффициент за мощность двигателя</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Итоговая цена полиса</td>
+			<td>14 428.44</td>
+			<td>12 022.92</td>
+		</tr>
+	</table>
+	<button>Купить полис</button>
+</div>
+<div id="osago-modal-window">
+	<div>
+		<div>Проверка Кбм по базе АИС РСА</div>
+		<div>Фамилия, имя, отчество (полностью):</div>
+		<input type="text">
+		<div>
+			<div>
+				<div>Дата рождения:</div>
+				<input type="text">
+			</div>
+			<div>
+				<div>Серия в/у:</div>
+				<input type="text">
+			</div>
+			<div>
+				<div>Номер в/у:</div>
+				<input type="text">
+			</div>
+		</div>
+		<div id="osago-modal-window-close">×</div>
+		<button id="osago-modal-window-button">Проверить Кбм</button>
+	</div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
