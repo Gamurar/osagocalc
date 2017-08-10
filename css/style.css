@@ -1,7 +1,14 @@
+#main{
+	width: 1024px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 #osago{
 	height: auto;
-	width: 850px;
-	padding: 10px 10px 10px 20px;
+	width: calc(100% - 100px);
+	padding: 10px 10px 10px 10px;
 	border: 1px solid rgb(221, 221, 221);
 	display: flex;
 	flex-wrap: wrap;
@@ -9,22 +16,22 @@
 	font-size: 14px;
 	color: #999;
 }
-	#osago > div{
+	.osago-content{
 		width: 425px;
 		margin: 0 0 15px 0;
 	}
-		#osago > div > div{
+		.osago-content-h{
 			margin: 0 0 8px 0;
 		}
-		#osago > div > label{
+		.osago-content > label{
 			display: flex;
 			align-items: center;
 			margin-bottom: 5px;
 		}
-		#osago >  div:last-child > div:last-child{
+		.osago-content-last{
 			display: flex;
 		}
-		#osago >  div:last-child > div:last-child > label{
+		.osago-content-last > label{
 			margin-left: 5px;
 			display: flex;
 			align-items: center;
@@ -32,7 +39,7 @@
 	#osago input{
 		display: none;
 	}
-	#osago label{
+	.label-radio{
 		cursor: pointer;
 	}
 	.osago-radio{
@@ -46,7 +53,7 @@
 		position: relative;
 		transition: border 0.3s;
 	}
-	#osago label:hover .osago-radio {
+	.label-radio:hover .osago-radio {
 		border: 1px solid #de8650;
 	}
 	.osago-radio:after{
@@ -64,10 +71,7 @@
 		border: 1px solid #d28759;
 		border-radius: 50%;
 	}
-	#osago > div > label > input:checked + div:after{
-		opacity: 1;
-	}
-	#osago > div > div > label > input:checked + div:after{
+	.label-radio > input:checked + div:after{
 		opacity: 1;
 	}
 	#osago select{
@@ -102,7 +106,7 @@
 	#osago{
 		width: calc(100% - 30px);
 	}
-		#osago > div{
+		.osago-content{
 			width: 100%;
 		}
 	#osago select{
@@ -110,8 +114,10 @@
 	}
 }
 /********************************************************************/
-#osago-driver{
-	width: 880px;
+
+
+.osago-driver{
+	width: calc(100% - 80px);
 	border: 1px solid rgb(221, 221, 221);
 	margin-top: 20px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -119,45 +125,46 @@
 	color: #999;
 	z-index: 1;
 }
-	#osago-driver > div{
+
+	.osago-driver > div{
 		padding: 10px 15px;
 	}
-	#osago-driver > div > div{
+	.osago-driver-first-content, .osago-driver-second-content, .osago-driver-third-content, .osago-driver-fourth-content{
 		height: 70px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
 	}
-	#osago-driver > div:last-child{
+	.osago-driver-content, .osago-driver-choice-content{
 		flex-wrap: wrap;
 	}
-	#osago-driver > div:first-child{
+	.osago-driver-h{
 		font-size: 16px;
 		background: #ebebeb;
 	}
-	#osago-driver > div:last-child{
+	.osago-driver-content, .osago-driver-choice-content{
 		display: flex;
 		justify-content: space-between;
 		font-size: 14px;
 	}
-		#osago-driver > div:last-child > div > div:last-child{
+		.osago-driver-first-content > div:last-child{
 			display: flex;
 			align-items: center;
 		}
-		#osago-driver label{
+		.osago-driver label{
 		cursor: pointer;
 	}
 	
-	#osago-driver label:hover .osago-radio {
+	.osago-driver label:hover .osago-radio {
 		border: 1px solid #de8650;
 	}
-	#osago-driver label > input:checked + div:after{
+	.osago-driver label > input:checked + div:after{
 		opacity: 1;
 	}
-	#osago-driver input{
+	.osago-driver input{
 		display: none;
 	}
-	#osago-driver select{
+	.osago-driver select{
 		height: 32px;
 		width: 126px;
 		border: 1px solid #ccc;
@@ -167,11 +174,11 @@
 		background: #fff;
 		transition: border 0.5s, box-shadow 0.5s;
 	}
-	#osago-driver select:hover{
+	.osago-driver select:hover{
 		border: 1px solid rgb(102, 175, 233);
 		box-shadow: 0 0 3px rgba(0,0,125,0.5);
 	}
-			#osago-button-driver-id1{
+			#osago-button-driver-id1, #osago-button-driver-id2, #osago-button-driver-id3, #osago-button-driver-id4{
 				height: 32px;
 				width: 125px;
 				border: 1px solid #e38d13;
@@ -181,29 +188,32 @@
 				cursor: pointer;
 				margin-left: -2px;
 			}
-			#osago-button-driver-id1:active{
+			#osago-button-driver-id1:active, #osago-button-driver-id2:active, #osago-button-driver-id3:active, #osago-button-driver-id4:active{
 				background: #eb9316;
 			}
-	.osago-driver-content{
+	.osago-driver-content, .osago-driver-choice-content{
 		display: flex;
 	}
-	.osago-driver-content > label{
+	.osago-driver-content > label, .osago-driver-choice-content > label{
 		display: flex;
 		align-items: center;
 	}
-	.osago-driver-content > label:last-child{
+	.osago-driver-content > label:last-child, .osago-driver-choice-content > label:last-child{
 		margin-left: 10px;
 	}
 @media only screen and (max-width: 850px) {
-	#osago-driver{
+	.osago-driver{
 		width: calc(100%);
 	}
 }
 @media only screen and (max-width: 850px){
-	#osago-driver select{
+	#main{
 		width: 100%;
 	}
-	#osago-driver > div:last-child > div:last-child{
+	.osago-driver select{
+		width: 100%;
+	}
+	.osago-driver-content > div:last-child, .osago-driver-choice-content > div:last-child{
 		width: 100%;
 	}
 }
@@ -211,8 +221,8 @@
 /********************************************************************/
 #osago-result{
 	height: auto;
-	width: 850px;
-	padding: 10px 10px 10px 20px;
+	width: calc(100% - 110px);
+	padding: 10px 10px 10px 10px;
 	border: 1px solid rgb(221, 221, 221);
 	padding: 15px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -229,7 +239,7 @@
 		#osago-result tr:last-child > td{
 			border: none;
 		}
-	#osago-result > div{
+	#osago-result-h{
 		font-size: 30px;
 		color: rgb(51, 51, 51);
 		padding: 5px 0 10px 0;
@@ -268,8 +278,9 @@
 	align-items: center;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	z-index: 1;
 }
-	#osago-modal-window > div{
+	#osago-modal-content{
 		height: auto;
 		display: flex;
 		flex-direction: column;
@@ -280,26 +291,26 @@
 		border-radius: 5px;
 		position: relative;
 	}
-		#osago-modal-window > div > div:first-child{
+		#osago-modal-content-id1{
 			color: rgb(44, 44, 44);
 			margin: 10px 0;
 		}
-		#osago-modal-window > div > div:nth-child(2){
+		#osago-modal-content-id2{
 			font-weight: bold;
 			margin: 10px 0;
 		}
-		#osago-modal-window > div > div:nth-child(4){
+		#osago-modal-content-id4{
 			display: flex;
 			justify-content: space-between;
 			height: 65px;
 			margin: 10px 0;
 		}
-		#osago-modal-window > div > div:nth-child(4) > div{
+		.osago-modal-content-id4-c{
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
 		}
-				#osago-modal-window > div > div:nth-child(4) > div > div:first-child{
+				.osago-modal-content-id4-c > div:first-child{
 					font-weight: bold;
 				}
 		#osago-modal-window input{
@@ -341,17 +352,25 @@
 			cursor: pointer;
 		}
 @media only screen and (max-width: 620px) {
-	#osago-modal-window > div{
+	#osago-modal-content{
 		height: auto;
 	}
-	#osago-modal-window > div > div:nth-child(4){
+	#osago-modal-content-id4{
 		flex-direction: column;
 		height: auto;
 	}
-	#osago-modal-window > div > div{
+	#osago-modal-content > div{
 		margin: 0px 0 15px 0;
 	}
-	#osago-modal-window > div > div:nth-child(4) > div > div{
+	.osago-modal-content-id4-c > div{
 		margin: 10px 0 10px 0;
 	}
+}
+
+.hide {
+		display: none;
+	}
+
+.active {
+	display: block !important;
 }
