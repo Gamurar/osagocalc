@@ -109,7 +109,7 @@ body {
 	background: #eb9316;
 }
 
-#error-button {
+#error {
 	color: white;
 	background-color: #fb3737;
 	width: calc(100% - 110px);
@@ -128,7 +128,7 @@ body {
 		width: calc(100% - 30px);
 	}
 
-	#error-button {
+	#error {
 		width: calc(100% - 30px);
 	}
 }
@@ -148,7 +148,7 @@ body {
 	.osago-driver > div{
 		padding: 10px 15px;
 	}
-	.osago-driver-first-content, .osago-driver-second-content, .osago-driver-third-content, .osago-driver-fourth-content{
+	.osago-driver-first-content{
 		height: 70px;
 		display: flex;
 		flex-direction: column;

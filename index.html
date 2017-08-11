@@ -91,7 +91,7 @@
 					<option value="1">10 месяцев и более</option>  
 				</select>
 			</div>
-			<div class="osago-content" data-watching="" data-expr="isRusReg == true && isPerson == true">
+			<div id="drivers-limit" class="osago-content" data-watching="" data-expr="isRusReg == true && isPerson == true">
 				<div class="osago-content-h">Лица, допущенные к управлению</div>
 				<label class="label-radio"><input type="radio" name="radio4" value="1"><div class="osago-radio"></div>Ограниченный список  </label>
 				<label class="label-radio"><input type="radio" name="radio4" value="2"><div class="osago-radio"></div>Любые водители  </label>
@@ -147,21 +147,21 @@
 		<div class="osago-driver hide" data-expr="driversAmount > 1">
 			<div class="osago-driver-h">Водитель №2</div>
 			<div class="osago-driver-content">
-				<div class="osago-driver-second-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Возраст (лет)</div>
 					<div class="osago-driver-choice-content">
 						<label class="label-radio"><input type="radio" name="radio8" value="1"><div class="osago-radio"></div>18-23  </label>
 						<label class="label-radio"><input type="radio" name="radio8" value="2"><div class="osago-radio"></div>24 и более</label>
 					</div>
 				</div>
-				<div class="osago-driver-second-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Стаж (лет)</div>
 					<div class="osago-driver-choice-content">
 						<label class="label-radio"><input type="radio" name="radio9" value="1"><div class="osago-radio"></div>0-2  </label>
 						<label class="label-radio"><input type="radio" name="radio9" value="2"><div class="osago-radio"></div>3 и более </label>
 					</div>
 				</div>
-				<div class="osago-driver-second-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Кбм</div>
 					<div>
 						<select name="osago-kbm"  id="osago-kbm-driver2">
@@ -185,21 +185,21 @@
 		<div class="osago-driver hide" data-expr="driversAmount > 2">
 			<div class="osago-driver-h">Водитель №3</div>
 			<div class="osago-driver-content">
-				<div class="osago-driver-third-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Возраст (лет)</div>
 					<div class="osago-driver-choice-content">
 						<label class="label-radio"><input type="radio" name="radio10" value="1"><div class="osago-radio"></div>18-23  </label>
 						<label class="label-radio"><input type="radio" name="radio10" value="2"><div class="osago-radio"></div>24 и более</label>
 					</div>
 				</div>
-				<div class="osago-driver-third-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Стаж (лет)</div>
 					<div class="osago-driver-choice-content">
 						<label class="label-radio"><input type="radio" name="radio11" value="1"><div class="osago-radio"></div>0-2  </label>
 						<label class="label-radio"><input type="radio" name="radio11" value="2"><div class="osago-radio"></div>3 и более </label>
 					</div>
 				</div>
-				<div class="osago-driver-third-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Кбм</div>
 					<div>
 						<select name="osago-kbm" id="osago-kbm-driver3">
@@ -223,21 +223,21 @@
 		<div class="osago-driver hide" data-expr="driversAmount > 3">
 			<div class="osago-driver-h">Водитель №4</div>
 			<div class="osago-driver-content">
-				<div class="osago-driver-fourth-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Возраст (лет)</div>
 					<div class="osago-driver-choice-content">
 						<label class="label-radio"><input type="radio" name="radio12" value="1"><div class="osago-radio"></div>18-23  </label>
 						<label class="label-radio"><input type="radio" name="radio12" value="2"><div class="osago-radio"></div>24 и более</label>
 					</div>
 				</div>
-				<div class="osago-driver-fourth-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Стаж (лет)</div>
 					<div class="osago-driver-choice-content">
 						<label class="label-radio"><input type="radio" name="radio13" value="1"><div class="osago-radio"></div>0-2  </label>
 						<label class="label-radio"><input type="radio" name="radio13" value="2"><div class="osago-radio"></div>3 и более </label>
 					</div>
 				</div>
-				<div class="osago-driver-fourth-content">
+				<div class="osago-driver-first-content">
 					<div class="osago-driver-content-h">Кбм</div>
 					<div>
 						<select name="osago-kbm" id="osago-kbm-driver4">
@@ -259,9 +259,9 @@
 			</div>
 		</div>
 		<button id="osago-button">Рассчитать ОСАГО</button>
-		<div class="error hide" id="error-button">
+		<div class="hide" id="error">
 			<strong>Ошибка</strong>
-			<span id="error-text">Не выбран тип водителей</span>
+			<span id="error-text"></span>
 		</div>
 		<div id="osago-result">
 			<div id="osago-result-h">Результат расчета</div>
