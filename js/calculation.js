@@ -109,31 +109,7 @@ function calcTimeCoef() {
 	return getSelected("osago-term-of-insurance").value;	
 }
 
-// function calcFinalPrice() {
-// 	var finalPrice = [];
-// 	var minPrice = result.baseCoef[0] *
-// 				   result.bonusMalusCoef *
-// 				   reuslt.powerCoef *
-// 				   result.ageExpCoef *
-// 				   result.limitCoef	*
-// 				   result.nonobsCoef *
-// 				   result.timeCoef;
 
-// 	var maxPrice = result.baseCoef[1] *
-// 				   result.bonusMalusCoef *
-// 				   result.ageExpCoef *
-// 				   result.limitCoef	*
-// 				   reuslt.powerCoef *
-// 				   result.nonobsCoef *
-// 				   result.timeCoef;
-
-// 	return [minPrice, maxPrice];
-// }
-
-// // Vehicle class
-// function Vehicle(type)
-
-// functions-helpers
 function getSelected(id) {
 	var selectNode = document.getElementById(id);
 	var selected = selectNode.options[selectNode.selectedIndex];
