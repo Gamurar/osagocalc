@@ -1,3 +1,9 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+
 #main{
 	width: 1024px;
 	height: auto;
@@ -102,6 +108,15 @@
 #osago-button:active{
 	background: #eb9316;
 }
+
+#error-button {
+	color: white;
+	background-color: #fb3737;
+	width: calc(100% - 110px);
+	border: 1px solid #fb3737;
+	margin-bottom: 20px;
+	padding: 15px;
+}
 @media only screen and (max-width: 850px) {
 	#osago{
 		width: calc(100% - 30px);
@@ -110,6 +125,10 @@
 			width: 100%;
 		}
 	#osago select{
+		width: calc(100% - 30px);
+	}
+
+	#error-button {
 		width: calc(100% - 30px);
 	}
 }
@@ -260,9 +279,10 @@
 		background: #337ab7;
 	}
 @media only screen and (max-width: 850px) {
-	#osago-result{
+	#osago-result {
 		width: calc(100% - 30px);
 	}
+
 }
 /********************************************************************************************************************/
 #osago-modal-window{
@@ -366,6 +386,7 @@
 		margin: 10px 0 10px 0;
 	}
 }
+
 
 .hide {
 		display: none;
