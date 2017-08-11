@@ -78,8 +78,11 @@ function radioOnChange(event) {
 		}
 		else if (targetName == "radio4") {
 			limitedDrivers = event.target.value == 1;
-			if (!limitedDrivers)
+			if (!limitedDrivers) {
 				driversAmount = 0;
+			} else {
+				driversAmount = 1;
+			}
 		} 
 		else if (targetName == "radio5") {
 			driversAmount = event.target.value;
@@ -128,6 +131,3 @@ function regionOnChange() {
 	}
 	citiesNode.innerHTML = citiesContent;
 }
-// git test
-//git test 2
-
