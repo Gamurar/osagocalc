@@ -63,6 +63,10 @@ function calcTerritorСoef() {
 
 // Коэффициент бонус-малус
 function calcBonusMalusCoef() {
+	if (!limitedDrivers) {
+		return 1;
+	}
+
 	var drivers = [];
 	for (var i = 1; i <= driversAmount; i++) {
 		var kbm = Number(getSelected("osago-kbm-driver" + i).text);

@@ -14,8 +14,8 @@ body {
 #osago{
 	height: auto;
 	width: calc(100% - 100px);
-	padding: 10px 10px 10px 10px;
-	border: 1px solid rgb(221, 221, 221);
+/*	padding: 10px 10px 10px 10px;
+	border: 1px solid rgb(221, 221, 221);*/
 	display: flex;
 	flex-wrap: wrap;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -241,8 +241,8 @@ body {
 #osago-result{
 	height: auto;
 	width: calc(100% - 110px);
-	padding: 10px 10px 10px 10px;
-	border: 1px solid rgb(221, 221, 221);
+	/*padding: 10px 10px 10px 10px;
+	border: 1px solid rgb(221, 221, 221);*/
 	padding: 15px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
