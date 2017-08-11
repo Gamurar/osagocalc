@@ -1,14 +1,14 @@
-var osagoModalWindowClose = document.getElementById("osago-modal-window-close");
 var osagoModalWindow = document.getElementById("osago-modal-window");
-var osagoButtonDriverId1 = document.getElementById("osago-button-driver-id1");
-osagoModalWindowClose.onclick = function(){
-	osagoModalWindow.style.display = "none";
-	osagoModalWindow.style.opacity = "0";
-};
-osagoButtonDriverId1.onclick = function(){
+
+function openModalWindow(target) {
 	osagoModalWindow.style.display = "flex";
 	osagoModalWindow.style.opacity = "1";
-};
+}
+
+function closeModalWindow() {
+	osagoModalWindow.style.display = "none";
+	osagoModalWindow.style.opacity = "0";
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		var inputs = watchingArr[i].getElementsByTagName("input");
 		for (var j = 0; j < inputs.length; j++) {
 			inputs[j].addEventListener("change", function(event) {
-				if (!event)
+				if (!event) {
       				event = window.event;
-
+				}
 				radioOnChange(event);
 			});
 		}
@@ -52,8 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var region = document.getElementById("osago-region");
 	region.addEventListener("change", regionOnChange);
-
-	console.log(dict);
 });
 
 window.addEventListener("load", function(event) {
