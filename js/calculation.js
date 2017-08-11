@@ -6,22 +6,24 @@ function calculateOsago() {
 	var finalPrice = result.calcFinalPrice();
 	var minPrice = Math.round(finalPrice[0]);
 	var maxPrice = Math.round(finalPrice[1]);
-	document.getElementById("base-coef-min")	  .innerHTML = result.baseCoef[0];
- 	document.getElementById("base-coef-max")	  .innerHTML = result.baseCoef[1];
- 	document.getElementById("territor-coef-min")  .innerHTML = result.territorСoef;
- 	document.getElementById("territor-coef-max")  .innerHTML = result.territorСoef;
- 	document.getElementById("power-coef-min")	  .innerHTML = result.powerCoef;
- 	document.getElementById("power-coef-max")	  .innerHTML = result.powerCoef;
- 	document.getElementById("age-exp-coef-min")	  .innerHTML = result.ageExpCoef;
- 	document.getElementById("age-exp-coef-max")	  .innerHTML = result.ageExpCoef;
- 	document.getElementById("limit-сoef-min")	  .innerHTML = result.limitCoef;
- 	document.getElementById("limit-сoef-max")	  .innerHTML = result.limitCoef;
- 	document.getElementById("use-period-coef-min").innerHTML = result.usePeriodCoef;
- 	document.getElementById("use-period-coef-max").innerHTML = result.usePeriodCoef;
- 	document.getElementById("time-coef-min")	  .innerHTML = result.timeCoef;
- 	document.getElementById("time-coef-max")	  .innerHTML = result.timeCoef;
- 	document.getElementById("final-price-min")	  .innerHTML = minPrice;
- 	document.getElementById("final-price-max")	  .innerHTML = maxPrice;
+	document.getElementById("base-coef-min")	   .innerHTML = result.baseCoef[0];
+ 	document.getElementById("base-coef-max")	   .innerHTML = result.baseCoef[1];
+ 	document.getElementById("territor-coef-min")   .innerHTML = result.territorСoef;
+ 	document.getElementById("territor-coef-max")   .innerHTML = result.territorСoef;
+ 	document.getElementById("bonus-malus-coef-min").innerHTML = result.bonusMalusCoef;
+ 	document.getElementById("bonus-malus-coef-max").innerHTML = result.bonusMalusCoef;
+ 	document.getElementById("power-coef-min")	   .innerHTML = result.powerCoef;
+ 	document.getElementById("power-coef-max")	   .innerHTML = result.powerCoef;
+ 	document.getElementById("age-exp-coef-min")	   .innerHTML = result.ageExpCoef;
+ 	document.getElementById("age-exp-coef-max")	   .innerHTML = result.ageExpCoef;
+ 	document.getElementById("limit-сoef-min")	   .innerHTML = result.limitCoef;
+ 	document.getElementById("limit-сoef-max")	   .innerHTML = result.limitCoef;
+ 	document.getElementById("use-period-coef-min") .innerHTML = result.usePeriodCoef;
+ 	document.getElementById("use-period-coef-max") .innerHTML = result.usePeriodCoef;
+ 	document.getElementById("time-coef-min")	   .innerHTML = result.timeCoef;
+ 	document.getElementById("time-coef-max")	   .innerHTML = result.timeCoef;
+ 	document.getElementById("final-price-min")	   .innerHTML = minPrice;
+ 	document.getElementById("final-price-max")	   .innerHTML = maxPrice;
  }
 
 // Базовый тариф
@@ -46,6 +48,17 @@ function calcTerritorСoef() {
 	territorСoef = dict[region][city][Number(isTractor)];
 
 	return territorСoef;
+}
+
+// Коэффициент бонус-малус
+function calcBonusMalusCoef() {
+	var drivers = [];
+	for (var i = 1; i <= driversAmount; i++) {
+		var kbm = Number(getSelected("osago-kbm-driver" + i).text);
+		drivers.push(kbm);
+	}
+
+	return Math.max.apply(null, drivers);
 }
 
 // Коэффициент возраст-стаж

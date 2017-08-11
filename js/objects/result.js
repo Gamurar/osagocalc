@@ -31,13 +31,14 @@
 				return [minPrice, maxPrice];
 			},
 	 	init 		  : function() {
-	 		this.baseCoef 	  = calcBaseCoef();
-	 		this.territorСoef = calcTerritorСoef();
-	 		this.ageExpCoef   = calcAgeExpCoef();
-	 		this.limitCoef	  = calcLimitCoef();
-	 		this.powerCoef 	  = calcPowerCoef();
-	 		this.usePeriodCoef= calcUsePeriodCoef();
-	 		this.timeCoef 	  = calcTimeCoef();
+	 		this.baseCoef 	   = calcBaseCoef();
+	 		this.territorСoef  = calcTerritorСoef();
+	 		this.bonusMalusCoef= calcBonusMalusCoef();
+	 		this.ageExpCoef    = calcAgeExpCoef();
+	 		this.limitCoef	   = calcLimitCoef();
+	 		this.powerCoef 	   = calcPowerCoef();
+	 		this.usePeriodCoef = calcUsePeriodCoef();
+	 		this.timeCoef 	   = calcTimeCoef();
 
 	 	}				
 	};
