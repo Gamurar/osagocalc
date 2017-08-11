@@ -6,18 +6,22 @@ function calculateOsago() {
 	var finalPrice = result.calcFinalPrice();
 	var minPrice = Math.round(finalPrice[0]);
 	var maxPrice = Math.round(finalPrice[1]);
-	document.getElementById("base-coef-min")	.innerHTML = result.baseCoef[0];
- 	document.getElementById("base-coef-max")	.innerHTML = result.baseCoef[1];
- 	document.getElementById("territor-coef-min").innerHTML = result.territorСoef;
- 	document.getElementById("territor-coef-max").innerHTML = result.territorСoef;
- 	document.getElementById("power-coef-min")	.innerHTML = result.powerCoef;
- 	document.getElementById("power-coef-max")	.innerHTML = result.powerCoef;
- 	document.getElementById("age-exp-coef-min")	.innerHTML = result.ageExpCoef;
- 	document.getElementById("age-exp-coef-max")	.innerHTML = result.ageExpCoef;
- 	document.getElementById("time-coef-min")	.innerHTML = result.timeCoef;
- 	document.getElementById("time-coef-max")	.innerHTML = result.timeCoef;
- 	document.getElementById("final-price-min")	.innerHTML = minPrice;
- 	document.getElementById("final-price-max")	.innerHTML = maxPrice;
+	document.getElementById("base-coef-min")	  .innerHTML = result.baseCoef[0];
+ 	document.getElementById("base-coef-max")	  .innerHTML = result.baseCoef[1];
+ 	document.getElementById("territor-coef-min")  .innerHTML = result.territorСoef;
+ 	document.getElementById("territor-coef-max")  .innerHTML = result.territorСoef;
+ 	document.getElementById("power-coef-min")	  .innerHTML = result.powerCoef;
+ 	document.getElementById("power-coef-max")	  .innerHTML = result.powerCoef;
+ 	document.getElementById("age-exp-coef-min")	  .innerHTML = result.ageExpCoef;
+ 	document.getElementById("age-exp-coef-max")	  .innerHTML = result.ageExpCoef;
+ 	document.getElementById("limit-сoef-min")	  .innerHTML = result.limitCoef;
+ 	document.getElementById("limit-сoef-max")	  .innerHTML = result.limitCoef;
+ 	document.getElementById("use-period-coef-min").innerHTML = result.usePeriodCoef;
+ 	document.getElementById("use-period-coef-max").innerHTML = result.usePeriodCoef;
+ 	document.getElementById("time-coef-min")	  .innerHTML = result.timeCoef;
+ 	document.getElementById("time-coef-max")	  .innerHTML = result.timeCoef;
+ 	document.getElementById("final-price-min")	  .innerHTML = minPrice;
+ 	document.getElementById("final-price-max")	  .innerHTML = maxPrice;
  }
 
 // Базовый тариф
@@ -99,9 +103,21 @@ function calcAgeExpCoef() {
 
 // Коэффициент мощности двигателя
 function calcPowerCoef() {
-	var power = getSelected("osago-power-car").value;
+	return getSelected("osago-power-car").value;
+}
 
-	return power;
+// Ограничивающий коэффициент
+function calcLimitCoef() {
+	if (!isPerson) {
+		return 1.8;
+	} else {
+		return limitedDrivers ? 1 : 1.8;
+	}
+}
+
+// Коэффициент периода использования 
+function calcUsePeriodCoef() {
+	return getSelected("osago-period-of-use").value;
 }
 
 // Коэффициент срока страхования

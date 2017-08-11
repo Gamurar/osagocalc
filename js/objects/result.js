@@ -5,9 +5,9 @@
 	 	ageExpCoef 	  : 1, 	// Коэффициент возраст-стаж
 	 	limitCoef 	  : 1, 	// Ограничивающий коэффициент
 	 	powerCoef 	  : 1, 	// Коэффициент мощности двигателя
-	 	seasonCoef 	  : 1, 	// Коэффициент сезонности
-	 	nonobsCoef 	  : 1, 	// Коэффициент нарушений
+	 	usePeriodCoef : 1, 	// Коэффициент периода использования 	 	
 	 	timeCoef 	  : 1, 	// Коэффициент срока страхования
+	 	nonobsCoef 	  : 1,	// Коэффициент нарушений
 	 	calcFinalPrice: function() {
 				var finalPrice = [];
 				var minPrice = this.baseCoef[0] *
@@ -16,6 +16,7 @@
 							   this.ageExpCoef *
 							   this.limitCoef	*
 							   this.nonobsCoef *
+							   this.usePeriodCoef *
 							   this.timeCoef;
 
 				var maxPrice = this.baseCoef[1] *
@@ -24,6 +25,7 @@
 							   this.limitCoef	*
 							   this.powerCoef *
 							   this.nonobsCoef *
+							   this.usePeriodCoef *
 							   this.timeCoef;
 
 				return [minPrice, maxPrice];
@@ -32,7 +34,9 @@
 	 		this.baseCoef 	  = calcBaseCoef();
 	 		this.territorСoef = calcTerritorСoef();
 	 		this.ageExpCoef   = calcAgeExpCoef();
+	 		this.limitCoef	  = calcLimitCoef();
 	 		this.powerCoef 	  = calcPowerCoef();
+	 		this.usePeriodCoef= calcUsePeriodCoef();
 	 		this.timeCoef 	  = calcTimeCoef();
 
 	 	}				

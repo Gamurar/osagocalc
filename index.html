@@ -80,18 +80,15 @@
 			</div>
 			<div class="osago-content" data-expr="isRegistered == true && isRusReg == true">
 				<div class="osago-content-h">Период использования</div>
-				<select name="osago-term-of-insurance" id="osago-term-of-insurance">
-					<option value="1">1 год</option>  
-					<option value="0.95">9 месяцев</option>  
-					<option value="0.9">8 месяцев</option>  
-					<option value="0.8">7 месяцев</option>  
-					<option value="0.7">6 месяцев</option>  
-					<option value="0.65">5 месяцев</option>  
-					<option value="0.6">4 месяца</option>  
+				<select name="osago-period-of-use" id="osago-period-of-use">
 					<option value="0.5">3 месяца</option>  
-					<option value="0.4">2 месяца</option>  
-					<option value="0.3">1 месяц</option> 
-					<option value="0.2">15 дней</option>
+					<option value="0.6">4 месяца</option>  
+					<option value="0.65">5 месяцев</option>  
+					<option value="0.7">6 месяцев</option>  
+					<option value="0.8">7 месяцев</option>  
+					<option value="0.9">8 месяцев</option>  
+					<option value="0.95">9 месяца</option>  
+					<option value="1">10 месяцев и более</option>  
 				</select>
 			</div>
 			<div class="osago-content" data-watching="" data-expr="isRusReg == true && isPerson == true">
@@ -291,9 +288,14 @@
 					<td id="age-exp-coef-min">1.8</td>
 				</tr>
 				<tr>
+					<td>Коэффициент за количество допущенных к управлению лиц</td>
+					<td id="limit-сoef-max">1.8</td>
+					<td id="limit-сoef-min">1.8</td>
+				</tr>
+				<tr>
 					<td>Коэффициент за период использования</td>
-					<td>1</td>
-					<td>1</td>
+					<td id="use-period-coef-max">1</td>
+					<td id="use-period-coef-min">1</td>
 				</tr>
 				<tr>
 					<td>Коэффициент за срок страхования</td>
