@@ -125,7 +125,7 @@ function calcAgeExpCoef() {
 		age = "empty";
 		exp = "empty";
 	}
-	console.log(driversCoef);
+	
 	return Math.max.apply(null, driversCoef);
 }
 

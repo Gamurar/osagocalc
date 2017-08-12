@@ -43,7 +43,6 @@ body {
 }
 
 .osago-content-last {
-
 }
 
 .osago-content-last > label {
@@ -280,7 +279,6 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 .osago-driver-content > label, .osago-driver-choice-content > label {
-    
 }
 
 .osago-driver-content > label:last-child, .osago-driver-choice-content > label:last-child {
@@ -292,6 +290,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
         /* width: 100%; */
         /* margin-left: 15px; */
         /* margin-right: 15px; */
+        padding-bottom: 15px;
     }
 
     .osago-driver-content > label:last-child, .osago-driver-choice-content > label:last-child {
@@ -300,7 +299,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 
     #osago-button-driver-id1, #osago-button-driver-id2, #osago-button-driver-id3, #osago-button-driver-id4 {
         margin-top: 15px;
-        margin-left: calc((100% / 2) - 70px);
+        margin-left: 0px;
         height: 42px;
         width: 135px;
         border-radius: 2px;
@@ -475,7 +474,16 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     cursor: pointer;
 }
 
-@media only screen and (max-width: 540px) {
+.osago-modal-content-id4-c {
+    margin: 0px;
+    margin-right: 40px;
+}
+
+.osago-modal-content-id4-c:last-child {
+    margin-right: 0px;
+}
+
+@media only screen and (max-width: 750px) {
     #osago-modal-content {
         height: auto;
     }
@@ -493,16 +501,17 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     }
 
     .osago-modal-content-id4-c {
-    display: block;
-    margin-left: 0px;
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
     }
+
     #osago-modal-window-button {
         font-size: 1.1em;
     }
-
 }
 
-@media (max-width:2230px) and (min-width:540px) {
+@media (max-width: 1300px) and (min-width:960px) {
     .osago-modal-content-id4-c {
         margin: 0px;
         margin-right: 22px;
