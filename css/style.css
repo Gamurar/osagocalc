@@ -543,6 +543,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     margin: auto;
     width: 100px; 
     height: 100px;
+    text-align: center;
 }
 
 #osago-wait-overlay > #osago-wait-img span {
