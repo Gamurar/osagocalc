@@ -395,9 +395,6 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 
 #osago-modal-content {
     height: auto;
-    /*display: flex;
-		flex-direction: column;
-		justify-content: space-around;*/
     width: 590px;
     padding: 15px 23px 15px 15px;
     background: #fff;
@@ -416,15 +413,13 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 #osago-modal-content-id4 {
-    /*display: flex;
-			justify-content: space-between;*/
     height: 65px;
     margin: 10px 0;
 }
 
 .osago-modal-content-id4-c {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 22px;
 }
 
 .osago-modal-content-id4-c:first-child {
@@ -480,7 +475,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     cursor: pointer;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 540px) {
     #osago-modal-content {
         height: auto;
     }
@@ -507,7 +502,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 
 }
 
-@media only screen and (min-width: 620px) {
+@media (max-width:2230px) and (min-width:540px) {
     .osago-modal-content-id4-c {
         margin: 0px;
         margin-right: 22px;

@@ -162,9 +162,13 @@ function getSelected(id) {
 }
 
 function checkError() {
+	var driversLimitForm = document.getElementById("drivers-limit");
+	if (driversLimitForm.classList.contains("hide")) {
+		return false;
+	}
 	var error = document.getElementById("error");
 	var errorText = document.getElementById("error-text");
-	var limitInputs = document.getElementById("drivers-limit").getElementsByTagName("input");
+	var limitInputs = driversLimitForm.getElementsByTagName("input");
 	if (!limitInputs[0].checked && !limitInputs[1].checked) {
 		errorText.innerHTML = "Не выбран тип водителей";
 		error.classList.remove("hide");
