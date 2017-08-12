@@ -73,6 +73,13 @@ function radioOnChange(event) {
 		}
 		else if (targetName == "radio3") {
 			isRegistered = event.target.value == 1;
+			if (isRegistered) {
+				var hr = document.getElementsByClassName("line")[0];
+				hr.classList.remove("hide");
+			} else {
+				var hr = document.getElementsByClassName("line")[0];
+				hr.classList.add("hide");
+			}
 		}
 		else if (targetName == "radio4") {
 			limitedDrivers = event.target.value == 1;
