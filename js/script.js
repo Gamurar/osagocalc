@@ -1,13 +1,16 @@
 var osagoModalWindow = document.getElementById("osago-modal-window");
+var kbmDriver = null;
 
 function openModalWindow(target) {
 	osagoModalWindow.style.display = "flex";
 	osagoModalWindow.style.opacity = "1";
+	kbmDriver = target;
 }
 
 function closeModalWindow() {
 	osagoModalWindow.style.display = "none";
 	osagoModalWindow.style.opacity = "0";
+	infoBox.classList.add("hide");
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////

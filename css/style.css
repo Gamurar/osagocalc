@@ -387,7 +387,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 /********************************************************************************************************************/
-#osago-modal-window {
+#osago-modal-window, #osago-wait-overlay {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -410,7 +410,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 #osago-modal-content {
     height: auto;
     width: 590px;
-    padding: 15px 23px 15px 15px;
+    padding: 0px 25px 0px 15px;
     background: #fff;
     border-radius: 2px;
     position: relative;
@@ -476,9 +476,10 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     background: #eb9316;
     cursor: pointer;
     outline: none;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 14px;
     display: block;
+    margin-bottom: 15px;
 }
 
 #osago-modal-window-button:active {
@@ -501,6 +502,52 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 
 .osago-modal-content-id4-c:last-child {
     margin-right: 0px;
+}
+
+#kbm-check-info-box {
+    width: 101.7%;
+    display: block;
+    background: #ff893a;
+    border-color: #ff893a;
+    color: #fff;
+    padding: 15px;
+    margin: 0px;
+    position: inherit;
+    left: -15px;
+}
+
+#kbm-check-info-box h1 {
+    color: #323232;
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin-bottom:15px;   
+    margin-top:15px;
+}
+
+.alert {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+#osago-wait-overlay {
+    z-index: 2;
+    opacity: 1;
+}
+
+#osago-wait-overlay > #osago-wait-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px; 
+    height: 100px;
+}
+
+#osago-wait-overlay > #osago-wait-img span {
+    font-size: 20px;
+    color: #999;
 }
 
 @media only screen and (max-width: 750px) {
@@ -552,7 +599,8 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 .hide {
-    display: none;
+    display: none !important;
+    padding: 0px !important;
 }
 
 .active {
