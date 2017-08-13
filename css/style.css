@@ -404,7 +404,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
             align-items: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
-    z-index: 1;
+    z-index: 9998;
 }
 
 #osago-modal-content {
@@ -530,7 +530,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 #osago-wait-overlay {
-    z-index: 999;
+    z-index: 9999;
     opacity: 1;
 }
 
