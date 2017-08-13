@@ -28,7 +28,7 @@ var isRegistered = true;
 
 document.addEventListener("DOMContentLoaded", function() {
 	setRegions();
-	setCityCoef();
+	// setCityCoef();
 	box = document.querySelector("#osago");
 	
 	osagoInputList = box.getElementsByTagName("input");
@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	var region = document.getElementById("osago-region");
 	region.addEventListener("change", regionOnChange);
 
-	var vehicle = document.getElementById("osago-vehicle");
-	vehicle.addEventListener("change", setCityCoef);
+	// var vehicle = document.getElementById("osago-vehicle");
+	// vehicle.addEventListener("change", setCityCoef);
 
-	var city = document.getElementById("osago-city");
-	city.addEventListener("change", setCityCoef);
+	// var city = document.getElementById("osago-city");
+	// city.addEventListener("change", setCityCoef);
 
-	// console.log(dict);
+	console.log(dict);
 });
 
 window.addEventListener("load", function(event) {
@@ -85,9 +85,7 @@ function radioOnChange(event) {
 			isRusReg = event.target.value == 1;
 			if (!isRusReg) {
 				limitedDrivers = false;
-				result.territorСoef = 1.7;
-			} else {
-				setCityCoef();
+				// setCityCoef();
 			}
 		}
 		else if (targetName == "radio3") {
@@ -169,6 +167,6 @@ function regionOnChange() {
 		}
 	}
 	citiesNode.innerHTML = citiesContent;
-	setCityCoef();
+	// setCityCoef();
 }
 
