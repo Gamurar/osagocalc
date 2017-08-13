@@ -63,16 +63,6 @@ window.addEventListener("load", function(event) {
 });
 
 function radioOnChange(event) {
-	// update all the values
-	if (isRusReg && isPerson) {
-		limitedDrivers = true;
-	}
-	if (!limitedDrivers) {
-		driversAmount = 0;
-	}
-
-	
-
 	if (event) {
 		var targetName = event.target.getAttribute("name");
 		if (targetName == "radio1") {
@@ -100,19 +90,19 @@ function radioOnChange(event) {
 		}
 		else if (targetName == "radio4") {
 			limitedDrivers = event.target.value == 1;
-			if (!limitedDrivers) {
-				driversAmount = 0;
-			} else {
-				driversAmount = 1;
-			}
+			driversAmount = limitedDrivers ? 1 : 0;
 		} 
 		else if (targetName == "radio5") {
 			driversAmount = event.target.value;
 		}
 	}
-
 	
 
+	limitedDrivers = isRusReg && isPerson;
+	
+	if (!limitedDrivers || !isDriversLimFormSelected()) {
+		driversAmount = 0;
+	}
 
 
 	for(var i = 0; i < attrList.length; i++) {
@@ -123,6 +113,9 @@ function radioOnChange(event) {
 			elem.classList.add("hide");
 		}
 	}
+
+
+
 }
 
 function setRegions() {
