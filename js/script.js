@@ -111,6 +111,11 @@ function radioOnChange(event) {
 			elem.classList.remove("hide");
 		} else {
 			elem.classList.add("hide");
+			if (elem.id == "drivers-limit") {
+				var radio = elem.getElementsByTagName("input");
+				radio[0].checked = false;
+				radio[1].checked = false;
+			}
 		}
 	}
 
