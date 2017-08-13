@@ -98,7 +98,7 @@ function radioOnChange(event) {
 	}
 	
 
-	limitedDrivers = isRusReg && isPerson;
+	// limitedDrivers = isRusReg && isPerson;
 	
 	if (!limitedDrivers || !isDriversLimFormSelected()) {
 		driversAmount = 0;
@@ -115,6 +115,7 @@ function radioOnChange(event) {
 				var radio = elem.getElementsByTagName("input");
 				radio[0].checked = false;
 				radio[1].checked = false;
+				limitedDrivers = false;
 			}
 		}
 	}
