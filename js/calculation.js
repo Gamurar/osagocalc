@@ -63,17 +63,17 @@ function calcTerritorСoef() {
 
 // Коэффициент бонус-малус
 function calcBonusMalusCoef() {
-	if (!limitedDrivers) {
+	if (limitedDrivers) {
+		var drivers = [];
+		for (var i = 1; i <= driversAmount; i++) {
+			var kbm = Number(getSelected("osago-kbm-driver" + i).text);
+			drivers.push(kbm);
+		}
+
+		return Math.max.apply(null, drivers);
+	} else {
 		return 1;
-	}
-
-	var drivers = [];
-	for (var i = 1; i <= driversAmount; i++) {
-		var kbm = Number(getSelected("osago-kbm-driver" + i).text);
-		drivers.push(kbm);
-	}
-
-	return Math.max.apply(null, drivers);
+	}	
 }
 
 // Коэффициент возраст-стаж

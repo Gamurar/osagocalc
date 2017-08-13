@@ -66,10 +66,14 @@ function radioOnChange(event) {
 			isPerson = event.target.value == 1;
 			if (!isPerson) {
 				driversAmount = 0;
+				limitedDrivers = false;
 			}
 		}
 		else if (targetName == "radio2") {
 			isRusReg = event.target.value == 1;
+			if (!isRusReg) {
+				limitedDrivers = false;
+			}
 		}
 		else if (targetName == "radio3") {
 			isRegistered = event.target.value == 1;
