@@ -35,7 +35,7 @@
 	 		this.bonusMalusCoef= calcBonusMalusCoef();
 	 		this.ageExpCoef    = calcAgeExpCoef();
 	 		this.limitCoef	   = calcLimitCoef();
-	 		this.powerCoef 	   = calcPowerCoef();
+	 		this.powerCoef 	   = getSelected("osago-power-car").value;
 	 		this.usePeriodCoef = calcUsePeriodCoef();
 	 		this.timeCoef 	   = calcTimeCoef();
 

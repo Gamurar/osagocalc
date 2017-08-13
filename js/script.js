@@ -55,8 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var region = document.getElementById("osago-region");
 	region.addEventListener("change", regionOnChange);
-
-	console.log(dict);
 });
 
 window.addEventListener("load", function(event) {
@@ -146,6 +144,8 @@ function regionOnChange() {
 	for(var city in dict[region]) {
 		if (parseInt(city)) {
 			result.territorСoef = dict[region][city][0];
+			citiesContent += "<option value='" + value + "'>"
+									+ region + "</option>";
 		} else {
 			value = JSON.stringify(dict[region][city]);
 			citiesContent += "<option value='" + value + "'>"

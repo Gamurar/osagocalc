@@ -119,11 +119,6 @@ function calcAgeExpCoef() {
 	return Math.max.apply(null, driversCoef);
 }
 
-// Коэффициент мощности двигателя
-function calcPowerCoef() {
-	return getSelected("osago-power-car").value;
-}
-
 // Ограничивающий коэффициент
 function calcLimitCoef() {
 	if (!isPerson) {
