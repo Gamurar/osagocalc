@@ -169,7 +169,7 @@ function checkError() {
 	var error = document.getElementById("error");
 	var errorText = document.getElementById("error-text");
 	var limitInputs = driversLimitForm.getElementsByTagName("input");
-	if (!limitInputs[0].checked && !limitInputs[1].checked) {
+	if (!isDriversLimFormSelected()) {
 		errorText.innerHTML = "Не выбран тип водителей";
 		error.classList.remove("hide");
 		return true;
@@ -203,4 +203,13 @@ function checkError() {
 		error.classList.add("hide");
 	}
 	return false;
+}
+
+function isDriversLimFormSelected() {
+	var limitInputs = document.getElementById("drivers-limit").getElementsByTagName("input");
+	if (!limitInputs[0].checked && !limitInputs[1].checked) {
+		return false;
+	} else {
+		return true;
+	}
 }

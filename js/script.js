@@ -1,13 +1,16 @@
 var osagoModalWindow = document.getElementById("osago-modal-window");
+var kbmDriver = null;
 
 function openModalWindow(target) {
 	osagoModalWindow.style.display = "flex";
 	osagoModalWindow.style.opacity = "1";
+	kbmDriver = target;
 }
 
 function closeModalWindow() {
 	osagoModalWindow.style.display = "none";
 	osagoModalWindow.style.opacity = "0";
+	infoBox.classList.add("hide");
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -87,16 +90,20 @@ function radioOnChange(event) {
 		}
 		else if (targetName == "radio4") {
 			limitedDrivers = event.target.value == 1;
-			if (!limitedDrivers) {
-				driversAmount = 0;
-			} else {
-				driversAmount = 1;
-			}
+			driversAmount = limitedDrivers ? 1 : 0;
 		} 
 		else if (targetName == "radio5") {
 			driversAmount = event.target.value;
 		}
 	}
+	
+
+	limitedDrivers = isRusReg && isPerson;
+	
+	if (!limitedDrivers || !isDriversLimFormSelected()) {
+		driversAmount = 0;
+	}
+
 
 	for(var i = 0; i < attrList.length; i++) {
 		var elem = attrList[i];
@@ -104,8 +111,16 @@ function radioOnChange(event) {
 			elem.classList.remove("hide");
 		} else {
 			elem.classList.add("hide");
+			if (elem.id == "drivers-limit") {
+				var radio = elem.getElementsByTagName("input");
+				radio[0].checked = false;
+				radio[1].checked = false;
+			}
 		}
 	}
+
+
+
 }
 
 function setRegions() {

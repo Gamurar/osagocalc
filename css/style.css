@@ -394,7 +394,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 /********************************************************************************************************************/
-#osago-modal-window {
+#osago-modal-window, #osago-wait-overlay {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -411,13 +411,13 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
             align-items: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
-    z-index: 1;
+    z-index: 9998;
 }
 
 #osago-modal-content {
     height: auto;
     width: 590px;
-    padding: 15px 23px 15px 15px;
+    padding: 0px 25px 0px 15px;
     background: #fff;
     border-radius: 2px;
     position: relative;
@@ -485,9 +485,10 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     cursor: pointer;
     float: left;
     outline: none;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 14px;
     display: block;
+    margin-bottom: 15px;
 }
 
 #osago-modal-window-button:active {
@@ -538,7 +539,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 #osago-wait-overlay {
-    z-index: 999;
+    z-index: 9999;
     opacity: 1;
 }
 
@@ -607,7 +608,8 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 .hide {
-    display: none;
+    display: none !important;
+    padding: 0px !important;
 }
 
 .active {
