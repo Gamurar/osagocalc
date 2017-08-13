@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var region = document.getElementById("osago-region");
 	region.addEventListener("change", regionOnChange);
+
+	console.log(dict);
 });
 
 window.addEventListener("load", function(event) {
@@ -76,17 +78,11 @@ function radioOnChange(event) {
 			isRusReg = event.target.value == 1;
 			if (!isRusReg) {
 				limitedDrivers = false;
+				result.territorСoef = 1.7;
 			}
 		}
 		else if (targetName == "radio3") {
 			isRegistered = event.target.value == 1;
-			if (isRegistered) {
-				var hr = document.getElementsByClassName("line")[0];
-				hr.classList.remove("hide");
-			} else {
-				var hr = document.getElementsByClassName("line")[0];
-				hr.classList.add("hide");
-			}
 		}
 		else if (targetName == "radio4") {
 			limitedDrivers = event.target.value == 1;
@@ -97,8 +93,6 @@ function radioOnChange(event) {
 		}
 	}
 	
-
-	// limitedDrivers = isRusReg && isPerson;
 	
 	if (!limitedDrivers || !isDriversLimFormSelected()) {
 		driversAmount = 0;
@@ -111,7 +105,7 @@ function radioOnChange(event) {
 			elem.classList.remove("hide");
 		} else {
 			elem.classList.add("hide");
-			if (elem.id == "drivers-limit") {
+			if (elem.id == "drivers-limit" || elem.id == "vehicle-owner") {
 				var radio = elem.getElementsByTagName("input");
 				radio[0].checked = false;
 				radio[1].checked = false;
@@ -150,9 +144,15 @@ function regionOnChange() {
 	var citiesContent = "";
 	var value = "";
 	for(var city in dict[region]) {
-		value = JSON.stringify(dict[region][city]);
-		citiesContent += "<option value='" + value + "'>"
+		if (parseInt(city)) {
+			result.territorСoef = dict[region][city][0];
+		} else {
+			value = JSON.stringify(dict[region][city]);
+			citiesContent += "<option value='" + value + "'>"
 									+ city + "</option>";
+
+			result.territorСoef = dict[region][city][Number(isTractor)];
+		}
 	}
 	citiesNode.innerHTML = citiesContent;
 }

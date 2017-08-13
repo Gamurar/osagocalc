@@ -51,16 +51,6 @@ function calcBaseCoef() {
 	return baseCoef;
 }
 
-// Территориальный коэффициент
-function calcTerritorСoef() {
-	var territorСoef = 0;
-	var region = getSelected("osago-region").text;
-	var city = getSelected("osago-city").text;
-	territorСoef = dict[region][city][Number(isTractor)];
-
-	return territorСoef;
-}
-
 // Коэффициент бонус-малус
 function calcBonusMalusCoef() {
 	if (limitedDrivers) {
@@ -169,7 +159,8 @@ function checkError() {
 	var error = document.getElementById("error");
 	var errorText = document.getElementById("error-text");
 	var limitInputs = driversLimitForm.getElementsByTagName("input");
-	if (!isDriversLimFormSelected()) {
+	if (!isDriversLimFormSelected() &&
+		 !driversLimitForm.classList.contains("hide")) {
 		errorText.innerHTML = "Не выбран тип водителей";
 		error.classList.remove("hide");
 		return true;

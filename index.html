@@ -19,19 +19,19 @@
 				<label class="label-radio"><input type="radio" name="radio2" checked="checked" value="1"><div class="osago-radio"></div>Российская федерация  </label>
 				<label class="label-radio"><input type="radio" name="radio2" value="2"><div class="osago-radio"></div>Иностранное государство </label>
 			</div>
-			<hr class="line">
-			<div class="osago-content" id="region" data-expr="isRegistered == true">
+			<hr class="line" data-expr="isRegistered == true && isRusReg">
+			<div class="osago-content" id="region" data-expr="isRegistered == true && isRusReg">
 				<div class="osago-content-h">Регион</div>
 				<select name="osago-region" id="osago-region">
 				</select>
 			</div>
-			<div class="osago-content" id="city" data-expr="isRegistered == true">
+			<div class="osago-content" id="city" data-expr="isRegistered == true && isRusReg">
 				<div class="osago-content-h">Город</div>
 				<select name="osago-city" id="osago-city">
 					<option value="1" id="osago-city-id1">г. Москва</option>
 				</select>
 			</div>
-			<hr class="line">
+			<hr class="line" data-expr="isRegistered == true">
 			<div class="osago-content" id="vehicle-type">
 				<div class="osago-content-h">Транспортное средство</div>
 				<select name="osago-vehicle" id="osago-vehicle">

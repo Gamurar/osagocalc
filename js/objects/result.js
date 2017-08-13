@@ -32,7 +32,6 @@
 			},
 	 	init 		  : function() {
 	 		this.baseCoef 	   = calcBaseCoef();
-	 		this.territorСoef  = calcTerritorСoef();
 	 		this.bonusMalusCoef= calcBonusMalusCoef();
 	 		this.ageExpCoef    = calcAgeExpCoef();
 	 		this.limitCoef	   = calcLimitCoef();
