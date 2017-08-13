@@ -63,6 +63,16 @@ window.addEventListener("load", function(event) {
 });
 
 function radioOnChange(event) {
+	// update all the values
+	if (isRusReg && isPerson) {
+		limitedDrivers = true;
+	}
+	if (!limitedDrivers) {
+		driversAmount = 0;
+	}
+
+	
+
 	if (event) {
 		var targetName = event.target.getAttribute("name");
 		if (targetName == "radio1") {
@@ -100,6 +110,10 @@ function radioOnChange(event) {
 			driversAmount = event.target.value;
 		}
 	}
+
+	
+
+
 
 	for(var i = 0; i < attrList.length; i++) {
 		var elem = attrList[i];
