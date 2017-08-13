@@ -536,6 +536,9 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 
 .alert {
     text-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+    display: inline-block !important;
+    position: relative;
+    left: -120px;
 }
 
 #osago-wait-overlay {
