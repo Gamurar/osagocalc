@@ -28,6 +28,7 @@ var isRegistered = true;
 
 document.addEventListener("DOMContentLoaded", function() {
 	setRegions();
+	setCityCoef();
 	box = document.querySelector("#osago");
 	
 	osagoInputList = box.getElementsByTagName("input");
@@ -55,6 +56,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var region = document.getElementById("osago-region");
 	region.addEventListener("change", regionOnChange);
+
+	var vehicle = document.getElementById("osago-vehicle");
+	vehicle.addEventListener("change", setCityCoef);
+
+	var city = document.getElementById("osago-city");
+	city.addEventListener("change", setCityCoef);
+
+	// console.log(dict);
 });
 
 window.addEventListener("load", function(event) {
@@ -77,6 +86,8 @@ function radioOnChange(event) {
 			if (!isRusReg) {
 				limitedDrivers = false;
 				result.territorСoef = 1.7;
+			} else {
+				setCityCoef();
 			}
 		}
 		else if (targetName == "radio3") {
@@ -137,22 +148,27 @@ function setRegions() {
 }
 
 function regionOnChange() {
+	// isTractor = getSelected("osago-vehicle").text == "Тракторы и иные машины";
 	var region = getSelected("osago-region").text;
 	var citiesNode = document.getElementById("osago-city");
 	var citiesContent = "";
 	var value = "";
 	for(var city in dict[region]) {
+		value = JSON.stringify(dict[region][city]);
 		if (parseInt(city)) {
-			result.territorСoef = dict[region][city][0];
-			citiesContent += "<option value='" + value + "'>"
-									+ region + "</option>";
+			// result.territorСoef = dict[region][city][0];
+			citiesContent += "<option value='" + 
+							value + "' data-nocity='" + 
+							city + "'>" + 
+							region + "</option>";
 		} else {
-			value = JSON.stringify(dict[region][city]);
-			citiesContent += "<option value='" + value + "'>"
-									+ city + "</option>";
-
-			result.territorСoef = dict[region][city][Number(isTractor)];
+			// result.territorСoef = dict[region][city][Number(isTractor)];
+			citiesContent += "<option value='" + 
+								value + "'>" + 
+								city + "</option>";
 		}
 	}
 	citiesNode.innerHTML = citiesContent;
+	setCityCoef();
 }
+

@@ -146,6 +146,19 @@ function getSelected(id) {
 	return selected;
 }
 
+function setCityCoef() {
+	isTractor = getSelected("osago-vehicle").text == "Тракторы и иные машины";
+	var region = getSelected("osago-region").text;
+	var city = getSelected("osago-city");
+	if (city.hasAttribute("data-nocity")) {
+			result.territorСoef = dict[region][city.dataset.nocity][0];
+		} else {
+			result.territorСoef = dict[region][city.text][Number(isTractor)];
+		}
+
+
+}
+
 function checkError() {
 	var driversLimitForm = document.getElementById("drivers-limit");
 	if (driversLimitForm.classList.contains("hide")) {

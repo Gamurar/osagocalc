@@ -38,6 +38,5 @@
 	 		this.powerCoef 	   = getSelected("osago-power-car").value;
 	 		this.usePeriodCoef = calcUsePeriodCoef();
 	 		this.timeCoef 	   = calcTimeCoef();
-
 	 	}				
 	};
