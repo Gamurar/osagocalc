@@ -541,6 +541,14 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     left: -120px;
 }
 
+.alert b, .alert h1 {
+    font-weight: bold;
+}
+
+.alert h1 {
+    font-family: 'ProximaNova', Arial;
+}
+
 #osago-wait-overlay {
     z-index: 9999;
     opacity: 1;
