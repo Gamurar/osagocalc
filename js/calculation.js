@@ -63,7 +63,8 @@ function calcTerritorСoef() {
 
 // Коэффициент бонус-малус
 function calcBonusMalusCoef() {
-	if (!limitedDrivers || !isPerson) {
+	if (limitedDrivers &&
+		isPerson &&) {
 		return 1;
 	}
 
