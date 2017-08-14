@@ -601,6 +601,17 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
         width: 100%;
         top: 0px;
     }
+
+    .alert {
+        position: initial;
+        font-size: 0.9em;
+    }
+
+    .alert h1 {
+        font-size: 3em !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
 }
 
 @media (max-width: 1300px) and (min-width:960px) {
