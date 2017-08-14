@@ -198,9 +198,9 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 .osago-driver-first-content {
+    width: 30%;
     height: 70px;
     display: inline-block;
-    margin-right: 120px;
 }
 
 @-moz-document url-prefix() { 
@@ -210,8 +210,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 .osago-driver-first-content:last-child {
-    margin-right: 0px;
-    padding-right: 0px;
+    width: 39%;
 }
 
 .osago-driver-content, .osago-driver-choice-content {
@@ -226,7 +225,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     font-size: 14px;
 }
 
-.osago-driver-first-content > div:last-child {
+.osago-driver-first-content:last-child {
 }
 
 .osago-driver-content-h {
@@ -252,7 +251,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 
 #osago .osago-driver select {
     height: 32px;
-    width: 126px;
+    width: 60% !important;
     border: 1px solid #ccc;
     border-radius: 2px 0 0 2px;
     outline: none;
@@ -273,7 +272,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 
 #osago-button-driver-id1, #osago-button-driver-id2, #osago-button-driver-id3, #osago-button-driver-id4 {
     height: 32px;
-    width: 125px;
+    width: 40%;
     border: 1px solid #e38d13;
     background: #f0ad4e;
     color: #fff;
