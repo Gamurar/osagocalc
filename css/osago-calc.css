@@ -175,8 +175,8 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
         margin-right: 20px;
     }
 
-    #osago-main #osago .osago-content select {
-        width: 100%;
+    #osago-main #osago .osago-content select{
+        width: 100% !important;
     }
 }
 
@@ -316,8 +316,12 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 @media only screen and (max-width: 850px) {
-    #osago-main, #osago .osago-driver select, .osago-driver-first-content, .osago-driver-content > div:last-child, .osago-driver-choice-content > div:last-child {
-        width: 100%
+    #osago-main, .osago-driver-first-content, .osago-driver-content > div:last-child, .osago-driver-choice-content > div:last-child {
+        width: 100%;
+    }
+
+    #osago .osago-driver select {
+        width: 100% !important;
     }
 }
 
