@@ -105,7 +105,6 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 #osago select {
     height: 32px;
     z-index: 0 !important;
-    width: 392px !important;
     border: 1px solid #ccc;
     border-radius: 2px;
     outline: none;
