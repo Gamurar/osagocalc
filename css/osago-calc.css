@@ -2,6 +2,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
+    overflow-x: hidden;
 }
 
 #osago-main {
@@ -105,7 +106,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 #osago select {
     height: 32px;
     z-index: 0 !important;
-    width: 392px !important;
+    width: 392px;
     border: 1px solid #ccc;
     border-radius: 2px;
     outline: none;
@@ -174,14 +175,8 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
         margin-right: 20px;
     }
 
-    #osago select {
-        width: calc(100%);
-    }
-
-    #error {
-        width: calc(100% - 65px);
-        margin-left: 15px;
-        margin-right: 15px;
+    #osago-main #osago .osago-content select {
+        width: 100%;
     }
 }
 
@@ -321,16 +316,8 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 }
 
 @media only screen and (max-width: 850px) {
-    #osago-main {
-        width: 100%;
-    }
-
-    #osago .osago-driver select {
+    #osago-main, #osago .osago-driver select, .osago-driver-first-content, .osago-driver-content > div:last-child, .osago-driver-choice-content > div:last-child {
         width: 100%
-    }
-
-    .osago-driver-content > div:last-child, .osago-driver-choice-content > div:last-child {
-        width: 100%;
     }
 }
 
@@ -521,7 +508,8 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     color: #fff;
     padding: 15px;
     margin: 0px;
-    position: inherit;
+    position: relative;
+    top: 50px;
     left: -15px;
 }
 
@@ -573,14 +561,24 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
 @media only screen and (max-width: 750px) {
     #osago-modal-content {
         height: auto;
+        padding: 15px;
     }
 
-    #osago-modal-content-id4 {
-        height: auto;
+    #osago-modal-content-id4 input {
+        display: inline-block;
+        width: 100%;
+    }
+
+    #osago-modal-content-id1 {
+        padding-top: 15px;
     }
 
     #osago-modal-content > div {
         margin: 0px 0 15px 0;
+    }
+
+    #osago-modal-content-id4 {
+        display: inline;
     }
 
     .osago-modal-content-id4-c > div {
@@ -588,13 +586,20 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     }
 
     .osago-modal-content-id4-c {
-        display: block;
-        margin-left: 0px;
+        width: 100%;
         margin-right: 0px;
     }
 
     #osago-modal-window-button {
         font-size: 1.1em;
+        margin-top: 15px;
+    }
+
+    #kbm-check-info-box {
+        display: inline-block;
+        margin: 0px !important;
+        width: 100%;
+        top: 0px;
     }
 }
 
