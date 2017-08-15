@@ -359,7 +359,7 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     border-bottom: 1px solid rgb(221, 221, 221);
 }
 
-#osago-result > button {
+#osago-result .buy {
     margin: 25px 0 0 0;
     background: #28a4c9;
     color: #fff;
@@ -369,9 +369,12 @@ div#GIBDD-registration > .label-radio, #drivers-limit > .label-radio, #vehicle-o
     border: none;
     outline: none;
     cursor: pointer;
+    display: block;
+    width: 120px;
+    text-decoration: none;
 }
 
-#osago-result > button:active {
+#osago-result .buy:active {
     background: #337ab7;
 }
 
