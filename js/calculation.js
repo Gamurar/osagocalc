@@ -1,5 +1,6 @@
 var isTractor = false;
 var table = document.getElementById("osago-result");
+var errorBox = document.getElementById("error");
 
 // Расчитать
 function calculateOsago() {
@@ -8,6 +9,9 @@ function calculateOsago() {
 			table.classList.add("hide");
 		}
 	} else {
+		if (!errorBox.classList.contains("hide")) {
+			errorBox.classList.add("hide");
+		}
 		result.init();
 		setCityCoef();
 		var finalPrice = result.calcFinalPrice();
