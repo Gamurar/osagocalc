@@ -8,7 +8,20 @@
 	 	usePeriodCoef : 1, 	// Коэффициент периода использования 	 	
 	 	timeCoef 	  : 1, 	// Коэффициент срока страхования
 	 	nonobsCoef 	  : 1,	// Коэффициент нарушений
+	 	init: function() {
+	 		this.baseCoef 	   = calcBaseCoef();
+	 		this.bonusMalusCoef= calcBonusMalusCoef();
+	 		this.ageExpCoef    = calcAgeExpCoef();
+	 		this.limitCoef	   = calcLimitCoef();
+	 		this.powerCoef 	   = getSelected("osago-power-car").value;
+	 		this.usePeriodCoef = calcUsePeriodCoef();
+	 		this.timeCoef 	   = calcTimeCoef();
+	 		this.territorСoef  = setCityCoef();
+	 	},
 	 	calcFinalPrice: function() {
+	 			if (typeof this.territorСoef == "undefined") {
+	 				console.log('Territor coefficient in result object is underfind');
+	 			}
 				var finalPrice = [];
 				var minPrice = this.baseCoef[0] *
 							   this.bonusMalusCoef *
@@ -17,6 +30,7 @@
 							   this.limitCoef	*
 							   this.nonobsCoef *
 							   this.usePeriodCoef *
+							   this.territorСoef *
 							   this.timeCoef;
 
 				var maxPrice = this.baseCoef[1] *
@@ -26,17 +40,9 @@
 							   this.powerCoef *
 							   this.nonobsCoef *
 							   this.usePeriodCoef *
+							   this.territorСoef *
 							   this.timeCoef;
 
 				return [minPrice, maxPrice];
-			},
-	 	init 		  : function() {
-	 		this.baseCoef 	   = calcBaseCoef();
-	 		this.bonusMalusCoef= calcBonusMalusCoef();
-	 		this.ageExpCoef    = calcAgeExpCoef();
-	 		this.limitCoef	   = calcLimitCoef();
-	 		this.powerCoef 	   = getSelected("osago-power-car").value;
-	 		this.usePeriodCoef = calcUsePeriodCoef();
-	 		this.timeCoef 	   = calcTimeCoef();
-	 	}				
+			}				
 	};

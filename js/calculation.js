@@ -13,7 +13,7 @@ function calculateOsago() {
 			errorBox.classList.add("hide");
 		}
 		result.init();
-		setCityCoef();
+		// setCityCoef();
 		var finalPrice = result.calcFinalPrice();
 		var minPrice = Math.round(finalPrice[0]);
 		var maxPrice = Math.round(finalPrice[1]);
@@ -153,16 +153,15 @@ function getSelected(id) {
 
 function setCityCoef() {
 	if (document.getElementById("region").classList.contains("hide")) {
-		result.territorСoef = 1.7;
-		return;
+		return 1.7;
 	}
 	isTractor = getSelected("osago-vehicle").text == "Тракторы и иные машины";
 	var region = getSelected("osago-region").text;
 	var city = getSelected("osago-city");
 	if (city.hasAttribute("data-nocity")) {
-			result.territorСoef = isTractor ? dict[region][city.dataset.nocity][0] : parseFloat(city.dataset.nocity);
+			return isTractor ? dict[region][city.dataset.nocity][0] : parseFloat(city.dataset.nocity);
 	} else {
-			result.territorСoef = dict[region][city.text][Number(isTractor)];
+			return dict[region][city.text][Number(isTractor)];
 	}
 }
 
